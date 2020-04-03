@@ -54,8 +54,8 @@ class LocationInfo{
   get cityStateZip(){
     if (this.locationObj.address){
       const { locality, administrative_district_level_1, postal_code } = this.locationObj.address;
-      const capitalCaseLocality = locality.charAt(0).toUpperCase() + locality.slice(1).toLowerCase();
-      return `${capitalCaseLocality}, ${administrative_district_level_1}, ${postal_code}`;
+      // const capitalCaseLocality = locality.charAt(0).toUpperCase() + locality.slice(1).toLowerCase();
+      return `${locality}, ${administrative_district_level_1}, ${postal_code}`;
     } else {
       return "";
     }

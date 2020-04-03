@@ -28,6 +28,7 @@ const IndexPageData = require("../models/index-page-data");
  */
 router.use("/checkout", require("./checkout"));
 router.use("/process-payment", require("./process-payment"));
+router.use("/order-status", require("./order-status"));
 
 /**
  * Matches: GET /

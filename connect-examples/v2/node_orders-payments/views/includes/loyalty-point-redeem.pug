@@ -12,8 +12,19 @@
 //- See the License for the specific language governing permissions and
 //- limitations under the License. 
 
-block append styles
-  link(rel='stylesheet', href='/stylesheets/header.css')
-header
-    div
-        a(href="/") CATE'S DELI
+div(class="panel clearfix")
+    h4(class="panel-title") Order Summary
+    div(class="line-items")
+        div(class="line-item clearfix")
+            div(class="left")
+                if item.imageUrl
+                    img(alt="item" src=item.imageUrl)
+            div(class="left") 1 × #{item.name}
+            div(class="right")
+                strong $#{item.price}
+    div(class="clearfix")
+        div(class="left")
+            strong Total
+        div(class="right tabular-figures")
+            strong $#{item.price}
+

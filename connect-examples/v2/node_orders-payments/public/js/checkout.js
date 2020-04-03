@@ -17,18 +17,14 @@ limitations under the License.
 /* eslint no-undef: 0 */
 
 let currentTab = 0; // Keeps track of the tab that is being shown.
-function showTab(num){
-  document.getElementsByClassName("tab")[num].classList.remove("hidden");
-}
-function hideTab(num){
-  document.getElementsByClassName("tab")[num].classList.add("hidden");
-}
+
 // This function adds .input--validity-visible to each input element if value is empty
 function showInputValidity(elements){
   elements.forEach( element => {
     element.classList.add("input--validity-visible");
   });
 }
+
 function nextTab(){
   // All of the required inputs in the first tab
   const inputs = document.querySelectorAll(".tab:not(.hidden) .panel-input");
